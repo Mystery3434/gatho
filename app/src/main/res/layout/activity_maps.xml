@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/map_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".MapsActivity" />
+
+        <ImageView
+            android:id="@+id/location_pointer"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="Location crosshair"
+            android:src="@drawable/pin_needle"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/refresh_map"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:layout_gravity="top|right"
+        android:layout_margin="10dp"
+        android:background="@color/secondaryDarkColor"
+        android:visibility="visible"
+        app:backgroundTint="?android:attr/colorPressedHighlight"
+        app:srcCompat="@drawable/refresh" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/create_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:background="@color/colorAccent"
+        android:visibility="visible"
+        app:srcCompat="@drawable/add_button" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/go_to_location"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="16dp"
+        android:background="@color/primaryLightColor"
+        android:visibility="gone"
+        app:backgroundTint="?attr/colorBackgroundFloating"
+        app:srcCompat="@drawable/ic_location_searching_black_24dp" />
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:id="@+id/bottom_map_slider"
+        android:elevation="2dp"
+        app:behavior_peekHeight="0dp"
+        app:behavior_hideable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/activity_new_event" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

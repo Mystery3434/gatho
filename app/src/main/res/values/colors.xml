@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#ffffff</color>
+<color name="primaryLightColor">#ffffff</color>
+<color name="colorPrimaryDark">#cccccc</color>
+<color name="colorAccent">#6abfa5</color>
+<color name="secondaryLightColor">#9cf2d6</color>
+<color name="secondaryDarkColor">#388e76</color>
+<color name="primaryTextColor">#000000</color>
+<color name="secondaryTextColor">#000000</color>
+<color name="categoryBlue">#003ac0</color>
+<color name="categoryPurple">#7b00c0</color>
+    <color name="categoryRed">#fe0000</color>
+    <color name="categoryGreen">#ffff01</color>
+    <color name="categoryYellow">#01d800</color>
+
+
+<color name="categoryOrange">#ffaa01</color>
+</resources>
